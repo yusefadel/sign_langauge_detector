@@ -1,0 +1,10 @@
+{%extends 'main.html'%}
+{%block content%}
+<h1>Your Django Web App</h1>
+    
+<form method="post" action="{% url 'home' %}">
+    {% csrf_token %}
+    <button type="submit" name="button_action" value="start_camera">Start Camera</button>
+    <button type="submit" name="button_action" value="generate_sign">Generate Sign</button>
+</form>
+{%endblock%}
